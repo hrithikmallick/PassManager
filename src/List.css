@@ -1,7 +1,8 @@
 .lbox {
-  margin-top: 25px;
+  margin-top: 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  color: #fff;
 }
 .pmain {
   font-size: 25px;
@@ -15,5 +16,12 @@
   font-size: 22px;
 }
 .pfunc .fas {
-  margin-right: 12px;
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .pmain,
+  .pfunc,
+  .phead {
+    font-size: 15px;
+  }
 }
