@@ -1,0 +1,19 @@
+.lbox {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.pmain {
+  font-size: 25px;
+  font-weight: 100;
+}
+.phead {
+  font-size: 25px;
+  font-weight: 100;
+}
+.pfunc {
+  font-size: 22px;
+}
+.pfunc .fas {
+  margin-right: 12px;
+}
