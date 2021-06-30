@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../App.css";
 
-const Main = (props) => {
+const Update = (props) => {
   const [data, setData] = useState({
     name: "",
     id: "",
@@ -59,4 +59,4 @@ const Main = (props) => {
   );
 };
 
-export default Main;
+export default Update;

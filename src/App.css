@@ -36,7 +36,7 @@ input {
   font-weight: 500;
   /* margin-top: 10px; */
   /* width: 60%; */
-  border-bottom: 2px solid #00b2ee;
+  border-bottom: 2px solid #fb9961;
   outline: none;
   color: #fff;
   margin-right: 25px;
@@ -49,6 +49,9 @@ input {
 .fas-head {
   font-size: 40px;
   margin-bottom: 5vh;
+  background: -webkit-linear-gradient(#ff8c00, #ff4500);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .inbox {
   display: flex;
@@ -56,21 +59,22 @@ input {
   justify-content: center;
 }
 .info {
-  border-color: #2196f3;
-  color: dodgerblue;
+  border-color: #fb9961;
+  color: #fb9961;
   background: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
   outline: none;
+  display: inline-block;
   font-size: 18px;
   transition: all 0.3s ease 0s;
-  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 29);
 }
 
 .info:hover {
-  background: #2196f3;
+  background: #fb9961;
   color: white;
   border: none;
   padding-top: 17px;

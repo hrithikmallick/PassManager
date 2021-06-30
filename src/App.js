@@ -24,7 +24,13 @@ const App = () => {
         return ind !== id;
       });
     });
-    localStorage.setItem("todos", JSON.stringify(item));
+    localStorage.setItem("allfield", JSON.stringify(item));
+  };
+  const editFunc = (id) => {
+    // let newEditItem = item.find((elem) => {
+    //   return elem.id === id;
+    // });
+    console.log(item[id]);
   };
   useEffect(() => {
     localStorage.setItem("allfield", JSON.stringify(item));
@@ -44,6 +50,7 @@ const App = () => {
             fid={val.id}
             fpass={val.pass}
             deletefunc={deleteItem}
+            edit={editFunc}
           />
         );
       })}
