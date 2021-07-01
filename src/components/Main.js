@@ -18,12 +18,20 @@ const Main = (props) => {
     });
   };
   const addField = (e) => {
-    props.passbtn(data);
     e.preventDefault();
-    alert("Your data has been added");
-    setData(() => {
-      return { name: "", id: "", pass: "" };
-    });
+    if (data.name === "" && data.pass === "" && data.id === "") {
+      alert("please fill the data first");
+    } else {
+      if (data.pass.length <= 10) {
+        alert("Your password is too weak ,try another one");
+      } else {
+        props.passbtn(data);
+        alert("Your data has been added");
+        setData(() => {
+          return { name: "", id: "", pass: "" };
+        });
+      }
+    }
   };
   const generateP = () => {
     var pass = "";
