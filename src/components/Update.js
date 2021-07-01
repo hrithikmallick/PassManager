@@ -52,7 +52,7 @@ const Update = (props) => {
           />
         </div>
         <button type="button" onClick={addField} className="info mt-5 mb-2">
-          Submit
+          Update
         </button>
       </div>
     </div>

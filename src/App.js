@@ -3,8 +3,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Main from "./components/Main";
 import List from "./components/List";
+import Update from "./components/Update";
 
 const App = () => {
+  const [toogle, setToogle] = useState(true);
   let inList;
   if (localStorage.getItem("allfield") === null) {
     inList = [];
@@ -27,17 +29,19 @@ const App = () => {
     localStorage.setItem("allfield", JSON.stringify(item));
   };
   const editFunc = (id) => {
-    // let newEditItem = item.find((elem) => {
-    //   return elem.id === id;
-    // });
     console.log(item[id]);
+    setToogle(false);
   };
   useEffect(() => {
     localStorage.setItem("allfield", JSON.stringify(item));
   }, [item]);
   return (
     <>
-      <Main passbtn={addPass}></Main>
+      {toogle ? (
+        <Main passbtn={addPass}></Main>
+      ) : (
+        <Update passbtn={addPass}></Update>
+      )}
 
       <h1 className="text-center mt-5 text-white">password Lists</h1>
 
