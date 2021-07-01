@@ -3,10 +3,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Main from "./components/Main";
 import List from "./components/List";
-import Update from "./components/Update";
-
 const App = () => {
-  const [toogle, setToogle] = useState(true);
+  // const [toogle, setToogle] = useState(true);
   let inList;
   if (localStorage.getItem("allfield") === null) {
     inList = [];
@@ -28,23 +26,17 @@ const App = () => {
     });
     localStorage.setItem("allfield", JSON.stringify(item));
   };
-  const editFunc = (id) => {
-    console.log(item[id]);
-    setToogle(false);
-  };
+  // const editFunc = (id) => {
+  //   console.log(item[id]);
+  //   setToogle(false);
+  // };
   useEffect(() => {
     localStorage.setItem("allfield", JSON.stringify(item));
   }, [item]);
   return (
     <>
-      {toogle ? (
-        <Main passbtn={addPass}></Main>
-      ) : (
-        <Update passbtn={addPass}></Update>
-      )}
-
+      <Main passbtn={addPass}></Main>
       <h1 className="text-center mt-5 text-white">password Lists</h1>
-
       {item.map((val, ind) => {
         return (
           <List
@@ -54,10 +46,11 @@ const App = () => {
             fid={val.id}
             fpass={val.pass}
             deletefunc={deleteItem}
-            edit={editFunc}
+            // edit={editFunc}
           />
         );
       })}
+      <p className="text-muted text-center mt-5">@copywrite hrithik mallick</p>
     </>
   );
 };
